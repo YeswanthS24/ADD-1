@@ -109,3 +109,44 @@
    </center>
    </body>
 </html>
+<html>
+    <head>
+        <title>validate form</title>
+    </head>
+    <body>
+        <form method="post">
+                <fieldset>
+                <input type ="text" placeholder="First Name" id="fname"/><br>
+                <input type="text" placeholder="Last Name" id="mname"/><br>
+                <input type="password" placeholder="Password" id="lname"/><br>
+                <input type="text"  id="num">
+                <input type="submit" value="LOGIN" onclick="return validate()" />
+                </fieldset>
+                </form>
+                <script>
+                function validate()
+                {
+                FirstName=document.getElementById("fname").value;
+                LastName=document.getElementById("mname").value;
+                Password =document.getElementById("lname").value;
+                if((FirstName ==""||(LastName=="")||Password==""))
+                {
+                alert("Fill all Details");
+                }
+                number=document.getElementById("num").value;
+            regx=/[7-9]\d{9}/;
+            if(regx.test(number))
+            {
+                alert("successfully filled");
+                
+            }
+            else{
+                alert("Invalid number");
+            }
+            
+
+                }
+                </script>
+    
+    </body>
+</html>
